@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "98263978259",
+    "firebase_url": "https://tieapplication.firebaseio.com",
+    "project_id": "tieapplication",
+    "storage_bucket": "tieapplication.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:98263978259:android:cde789366b31f6f2",
+        "android_client_info": {
+          "package_name": "com.technium.akash.tieapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "98263978259-n7orkqalifnk73julqccimg6s1q91qsd.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "98263978259-n7orkqalifnk73julqccimg6s1q91qsd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCVzRsKBKUj4_L6IE9eY2mudyYTG5u3PHU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

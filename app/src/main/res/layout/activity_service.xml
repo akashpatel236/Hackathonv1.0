@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".serviceActivity">
+
+    <Button
+        android:id="@+id/button2"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="114dp"
+        android:layout_marginEnd="162dp"
+        android:layout_marginLeft="161dp"
+        android:layout_marginRight="162dp"
+        android:layout_marginStart="161dp"
+        android:layout_marginTop="23dp"
+        android:text="Proceed"
+        android:onClick="serviceParameters"
+        app:layout_constraintBottom_toTopOf="@+id/editText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rg1"
+        />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="603dp"
+        android:layout_marginEnd="391dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="391dp"
+        android:layout_marginStart="20dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_begin="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editText"
+        style="@style/Widget.AppCompat.Light.AutoCompleteTextView"
+        android:layout_width="308dp"
+        android:layout_height="42dp"
+        android:layout_marginBottom="137dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="102dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Copyright © 2018 Tech Mahindra Ltd."
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button2" />
+
+    <RadioGroup
+        android:id="@+id/rg1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="23dp"
+        android:layout_marginLeft="75dp"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="104dp"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/mip1"
+            style="@android:style/Widget.CompoundButton.RadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="MIP-15a Information validation standard" />
+
+        <RadioButton
+            android:id="@+id/mip2"
+            style="@android:style/Widget.CompoundButton.RadioButton"
+            android:layout_width="350dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:text="MIP-15b Information validation activities" />
+    </RadioGroup>
+
+
+</android.support.constraint.ConstraintLayout>
