@@ -8,6 +8,7 @@ import android.os.AsyncTask;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -20,7 +21,13 @@ import org.apache.http.protocol.HttpContext;
 import java.io.IOException;
 import java.io.InputStream;
 
+
+
 public class Searchform extends AppCompatActivity {
+
+    private String telephone="";
+    private String postalcode="";
+    private String housecode="";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,10 +35,32 @@ public class Searchform extends AppCompatActivity {
         setContentView(R.layout.activity_searchform);
     }
 
-    public void RestServiceCall(View v)
-    {
+    public void RestServiceCall(View v) {
+        boolean validationCheck = true;
 
-        new LongRunningGetIO().execute();
+        TextView tn = (TextView) findViewById(R.id.tn);
+        TextView pc = (TextView) findViewById(R.id.pc);
+        TextView hc = (TextView) findViewById(R.id.hc);
+
+        telephone = tn.getText().toString();
+        postalcode = pc.getText().toString();
+        housecode = hc.getText().toString();
+
+        if (telephone.equals("")) {
+            tn.setError("Telephone number should not be empty.");
+            validationCheck = false;
+        }
+        if (postalcode.equals("")) {
+            pc.setError("Postalcode should not be empty.");
+            validationCheck = false;
+        }
+        if (housecode.equals("")){
+            hc.setError("Housenumber should not be empty.");
+        validationCheck = false;
+        }
+
+            if(validationCheck)
+                new LongRunningGetIO().execute();
     }
 
     private class LongRunningGetIO extends AsyncTask<Void, Void, String>
@@ -67,7 +96,9 @@ public class Searchform extends AppCompatActivity {
             HttpContext localContext = new BasicHttpContext();
             //  HttpGet httpGet = new HttpGet("https://jsonplaceholder.typicode.com/posts/1");
 
-            HttpGet httpGet = new HttpGet("https://api.github.com/");
+            //HttpGet httpGet = new HttpGet("https://api.github.com/");
+
+            HttpGet httpGet = new HttpGet("https://event-hackathon.herokuapp.com/kpn-wholesale/wipservices/wip1/"+telephone+"/"+postalcode+"/"+housecode);
 
             String text = null;
             try {
