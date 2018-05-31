@@ -55,29 +55,35 @@ public class LoginActivity extends AppCompatActivity {
     public void validationCheck(View view) {
         //Forward to mip selection Page...
         Log.i("Clicks", "Login Page");
-        Intent i = new Intent(LoginActivity.this, serviceActivity.class);
-        startActivity(i);
-        /*
+
         TextView email = (TextView) findViewById(R.id.email);
         TextView password = (TextView) findViewById(R.id.password);
 
         Log.i("login","Email is: "+email.getText().toString());
         Log.i("login","Password is"+password.getText().toString());
 
-        boolean validationCheck=emailValidator(email.getText().toString());
+        boolean validationCheck=false;
+
+        if(email.getText().toString().equals("")) {
+            email.setError("Email Should not be empty.");
+            validationCheck=false;
+        }
+
+        validationCheck=emailValidator(email.getText().toString());
+
         Log.i("login",validationCheck+" gettting from validation method");
 
-        if(email.getText().toString().equals(""))
-            email.setError("Email Should not be empty.");
+
         if(password.getText().toString().equals("")) {
-            password.setError("Password should atlease have 5 AlphaNumeric Characters");
             validationCheck=false;
+            password.setError("Password should atlease have 5 AlphaNumeric Characters");
             Log.i("login","Inside Password Validation");
         }
+
         if(validationCheck) {
             Intent i = new Intent(LoginActivity.this, serviceActivity.class);
             startActivity(i);
-        }*/
+        }
     }
 
 

@@ -9,6 +9,7 @@
     <Button
         android:id="@+id/button2"
         style="@style/Widget.AppCompat.Button.Colored"
+        android:background="@android:color/holo_green_dark"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="114dp"
@@ -17,13 +18,12 @@
         android:layout_marginRight="162dp"
         android:layout_marginStart="161dp"
         android:layout_marginTop="23dp"
-        android:text="Proceed"
         android:onClick="serviceParameters"
+        android:text="Proceed"
         app:layout_constraintBottom_toTopOf="@+id/editText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rg1"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/rg1" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline"
@@ -41,9 +41,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
+    <TextView
         android:id="@+id/editText"
-        style="@style/Widget.AppCompat.Light.AutoCompleteTextView"
         android:layout_width="308dp"
         android:layout_height="42dp"
         android:layout_marginBottom="137dp"
@@ -76,7 +75,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="MIP-15a Information validation standard" />
+            android:text="Information Validation Standards" />
 
         <RadioButton
             android:id="@+id/mip2"
@@ -84,7 +83,7 @@
             android:layout_width="350dp"
             android:layout_height="100dp"
             android:layout_weight="1"
-            android:text="MIP-15b Information validation activities" />
+            android:text="HTTPS API Test" />
     </RadioGroup>
 
 

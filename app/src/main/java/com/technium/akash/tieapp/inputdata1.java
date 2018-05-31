@@ -1,6 +1,7 @@
 package com.technium.akash.tieapp;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -100,6 +101,14 @@ public class inputdata1 extends AppCompatActivity {
 
 
         }
+
+    }
+
+    public void goback(View view)
+    {
+        Intent i = new Intent(inputdata1.this,serviceActivity.class);
+
+        startActivity(i);
 
     }
 

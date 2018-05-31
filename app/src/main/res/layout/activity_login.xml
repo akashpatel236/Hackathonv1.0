@@ -67,12 +67,20 @@
             <Button
                 android:id="@+id/email_sign_in_button"
                 style="?android:textAppearanceSmall"
+                android:background="@android:color/holo_green_dark"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:text="@string/action_sign_in"
                 android:textStyle="bold"
                 android:onClick="validationCheck"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dp"
+                android:alpha="0.6"
+                android:src="@drawable/logotechnium" />
 
         </LinearLayout>
     </ScrollView>

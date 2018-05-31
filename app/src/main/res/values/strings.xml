@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">WEB-API Application</string>
+    <string name="app_name">Risers WEB-API</string>
 
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
